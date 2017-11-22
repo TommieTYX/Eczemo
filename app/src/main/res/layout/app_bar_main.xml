@@ -31,7 +31,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:backgroundTint="@android:color/background_light"
-        app:srcCompat="@drawable/ic_menu_camera" />
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/d3"

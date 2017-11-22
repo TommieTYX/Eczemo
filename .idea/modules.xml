@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Eczemo.iml" filepath="$PROJECT_DIR$/Eczemo.iml" />
+      <module fileurl="file://C:\Users\kings\AndroidStudioProjects\Eczemo\Eczemo.iml" filepath="C:\Users\kings\AndroidStudioProjects\Eczemo\Eczemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\kings\AndroidStudioProjects\Eczemo\app\app.iml" filepath="C:\Users\kings\AndroidStudioProjects\Eczemo\app\app.iml" />
     </modules>
   </component>
 </project>
