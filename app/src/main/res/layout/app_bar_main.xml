@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team22.eczemo.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/background_dark"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@android:color/background_light"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/d3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="16dp"
+        app:backgroundTint="@android:color/background_light"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/noti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_margin="16dp"
+        app:backgroundTint="@android:color/background_dark"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="right|top"
+        app:srcCompat="@android:drawable/stat_notify_more" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/stepdetect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_margin="16dp"
+        app:backgroundTint="@android:color/background_light"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="bottom|center"
+        app:srcCompat="@drawable/ic_menu_share" />
+</android.support.design.widget.CoordinatorLayout>
+
+
