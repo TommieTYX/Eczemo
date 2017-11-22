@@ -41,10 +41,6 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="team22.eczemo.HRActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="team22.eczemo.D3Activity"
             android:label="@string/title_activity_d3"
             android:theme="@style/AppTheme.NoActionBar" />

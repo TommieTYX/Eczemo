@@ -23,18 +23,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton hr = (FloatingActionButton) findViewById(R.id.hr);
-        hr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
-                Intent i = new Intent(MainActivity.this, HRActivity.class);
-                startActivity(i);
-
-            }
-        });
-
         FloatingActionButton d3 = (FloatingActionButton) findViewById(R.id.d3);
         d3.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -8,6 +8,8 @@
         android:id="@+id/pie_chart_stub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:inflatedId="@+id/pie_chart_webview"
         android:layout="@layout/pie_chart_layout" />
 </android.support.constraint.ConstraintLayout>
