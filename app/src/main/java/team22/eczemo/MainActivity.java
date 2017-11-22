@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,6 +32,19 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();*/
                 Intent i2 = new Intent(MainActivity.this, D3Activity.class);
                 startActivity(i2);
+
+            }
+        });
+
+        FloatingActionButton newRec = (FloatingActionButton) findViewById(R.id.newRec);
+        newRec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
+                Intent intRec = new Intent(MainActivity.this, newRecord.class);
+                Log.i("Main","entering new record page");
+                startActivity(intRec);
 
             }
         });
