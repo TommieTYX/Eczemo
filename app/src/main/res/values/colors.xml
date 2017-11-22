@@ -3,6 +3,7 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#040404</color>
-    <color name="screen_background">#333</color>
+    <color name="screen_background">#333333</color>
     <color name="display_background">#000</color>
+    <color name="spinner">#FFFFFF</color>
 </resources>
