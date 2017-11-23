@@ -47,6 +47,11 @@ public class LoginActivity extends AppCompatActivity {
         mUserName.setText("a");
         mPasswordView.setText("a");
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
+
+        //DEBUG PURPOSE BYPASS LOGIN
+        Intent MainIntent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(MainIntent);
+
         btnLogin.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
