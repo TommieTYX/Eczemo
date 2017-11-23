@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context="team22.eczemo.newRecord">
 
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        tools:context="team22.eczemo.newRecord"
+        android:layout_height="200dp" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -158,5 +165,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 </android.support.constraint.ConstraintLayout>

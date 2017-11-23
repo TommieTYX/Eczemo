@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team22.eczemo.weatherFragment">
+
+    <TextView
+        android:id="@+id/HumidView"
+        android:layout_width="191dp"
+        android:layout_height="122dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="193dp" />
+
+    <TextView
+        android:id="@+id/iconView"
+        android:layout_width="191dp"
+        android:layout_height="122dp"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+</FrameLayout>

@@ -26,6 +26,13 @@ public class newRecord extends AppCompatActivity {
         rate4.getBackground().setAlpha(90);
         rate5.getBackground().setAlpha(90);
 
+        if (savedInstanceState == null) {
+            Log.i("newRecord","started going to fragment");
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, new weatherFragment())
+                    .commit();
+        }
+
         Spinner dropdown = (Spinner)findViewById(R.id.spinner);
         String[] items = new String[]{"Atopic Dermatitis", "Contact Dermatitis", "Dyshidrotic Eczema","Hand Eczema","Neurodermatitis","Nummular Eczema","Seborrheic Dermatitis","Stasis Dermatitis"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
