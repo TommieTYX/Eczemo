@@ -4,7 +4,7 @@
     tools:showIn="navigation_view">
 
     <group android:id="@+id/menu_top"
-        android:checkableBehavior="single">
+        android:checkableBehavior="none">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home_black_24dp"
@@ -26,7 +26,7 @@
 
     <group
         android:id="@+id/nav_btm"
-        android:checkableBehavior="single">
+        android:checkableBehavior="none">
         <item
             android:id="@+id/nav_addRec"
             android:icon="@android:drawable/ic_input_add"

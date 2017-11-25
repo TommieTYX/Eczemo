@@ -1,7 +1,6 @@
 package team22.eczemo;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,7 +14,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
@@ -122,7 +120,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_heatmap) {
-            startActivity(new Intent(MainActivity.this, Heatmap.class));
+            startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
 
         } else if (id == R.id.nav_statistics) {
