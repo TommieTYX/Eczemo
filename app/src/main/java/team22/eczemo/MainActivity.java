@@ -10,11 +10,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,17 +33,17 @@ public class MainActivity extends AppCompatActivity
         preImg.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.rate2));
 
 
-        FloatingActionButton d3 = (FloatingActionButton) findViewById(R.id.d3);
+        /*FloatingActionButton d3 = (FloatingActionButton) findViewById(R.id.d3);
         d3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
+                *//*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*//*
                 Intent i2 = new Intent(MainActivity.this, D3Activity.class);
                 startActivity(i2);
 
             }
-        });
+        });*/
         FloatingActionButton newRec = (FloatingActionButton) findViewById(R.id.newRec);
             newRec.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -52,8 +54,34 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intRec);
 
             }
-       });
+        });
 
+        TextView treatmentDesc = (TextView) findViewById(R.id.textview_main);
+        treatmentDesc.setMovementMethod(new ScrollingMovementMethod());
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("1231231231231223123123\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("1231231231231223123123\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("1231231231231223123123\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("ASDASDASD\r\n");
+        treatmentDesc.append("1231231231231223123123\r\n");
 
 
 

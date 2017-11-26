@@ -6,4 +6,6 @@
     <color name="screen_background">#333333</color>
     <color name="display_background">#000</color>
     <color name="spinner">#FFFFFF</color>
+    <color name="main_background">#CAECCF</color>
+    <color name="nav_bar">#6ab344</color>
 </resources>

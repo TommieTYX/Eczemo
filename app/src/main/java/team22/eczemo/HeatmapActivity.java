@@ -1,6 +1,8 @@
 package team22.eczemo;
 
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -32,6 +34,7 @@ import com.google.android.gms.maps.model.TileOverlay;
 import com.google.android.gms.maps.model.TileOverlayOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.maps.android.heatmaps.Gradient;
 import com.google.maps.android.heatmaps.HeatmapTileProvider;
 
 import org.json.JSONArray;
@@ -186,6 +189,18 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 return false;
             }
         });
+
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+
+                //{"lat" : 1.3576457690427843, "lng" : 103.75096892472357 } ,
+                //System.out.println("{\"lat\" : " + latLng.latitude + ", \"lng\" : " + latLng.longitude + " } ,");
+            }
+        });
+
+
+
         // Do other setup activities here too, as described elsewhere in this tutorial.
 
         // Turn on the My Location layer and the related control on the map.
@@ -288,9 +303,21 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
     private void addHeatMap() {
         List<LatLng> list = null;
 
+        // Create the gradient.
+        int[] colors = {
+                Color.rgb(102, 225, 0), // green
+                Color.rgb(255, 0, 0)    // red
+        };
+
+        float[] startPoints = {
+                0.2f, 1f
+        };
+
+        Gradient gradient = new Gradient(colors, startPoints);
+
         // Get the data: latitude/longitude positions of police stations.
         try {
-            list = readItems(R.raw.police_stations);
+            list = readItems(R.raw.dataset);
         } catch (JSONException e) {
             Toast.makeText(this, "Problem reading list of locations.", Toast.LENGTH_LONG).show();
         }
@@ -298,6 +325,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         // Create a heat map tile provider, passing it the latlngs of the police stations.
         mProvider = new HeatmapTileProvider.Builder()
                 .data(list)
+                .gradient(gradient)
+                .opacity(0.5)
                 .build();
         // Add a tile overlay to the map, using the heat map tile provider.
         mOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
