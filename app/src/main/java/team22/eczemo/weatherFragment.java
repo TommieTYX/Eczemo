@@ -96,37 +96,35 @@ public class weatherFragment extends Fragment {
         if(actualId == 800){
             long currentTime = new Date().getTime();
             if(currentTime>=sunrise && currentTime<sunset) {
-               // weather = 0x7f070033;
                 iconDetail = getActivity().getString(R.string.weather_sunny);
                 weather = "Sunny Day";
             } else {
-                //weather = 0x7f07002d;
                 iconDetail =getActivity().getString(R.string.weather_clear_night);
                 weather = "Clear Night";
             }
         } else {
             switch(id) {
-                case 2 : //weather = 0x7f070034;
+                case 2 :
                     iconDetail = getActivity().getString(R.string.weather_thunder);
                     weather = "thunder Storm";
                     break;
-                case 3 :// weather = 0x7f07002f;
+                case 3 :
                     iconDetail = getActivity().getString(R.string.weather_drizzle);
                     weather = "Drizzling Rain";
                     break;
-                case 7 :// weather = 0x7f070030;
+                case 7 :
                     iconDetail = getActivity().getString(R.string.weather_foggy);
                     weather = "Foggy Day";
                     break;
-                case 8 :// weather = 0x7f07002e;
+                case 8 :
                     iconDetail = getActivity().getString(R.string.weather_cloudy);
                     weather = "Cloudy Day";
                     break;
-                case 6 :// weather = 0x7f070032;
+                case 6 :
                     iconDetail = getActivity().getString(R.string.weather_snowy);
                     weather = "Snowy Day";
                     break;
-                case 5 : //weather = 0x7f070031;
+                case 5 :
                     iconDetail = getActivity().getString(R.string.weather_rainy);
                     weather = "Shower Rain";
                     break;
