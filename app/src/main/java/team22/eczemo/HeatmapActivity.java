@@ -126,15 +126,15 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
 
-        Switch s0 = (Switch) findViewById(R.id.switch0);
-        Switch s1 = (Switch) findViewById(R.id.switch1);
-        Switch s2= (Switch) findViewById(R.id.switch2);
-        Switch s3 = (Switch) findViewById(R.id.switch3);
-        Switch s4 = (Switch) findViewById(R.id.switch4);
-        Switch s5 = (Switch) findViewById(R.id.switch5);
-        Switch s6 = (Switch) findViewById(R.id.switch6);
-        Switch s7 = (Switch) findViewById(R.id.switch7);
-        Switch s8 = (Switch) findViewById(R.id.switch8);
+        final Switch s0 = (Switch) findViewById(R.id.switch0);
+        final Switch s1 = (Switch) findViewById(R.id.switch1);
+        final Switch s2= (Switch) findViewById(R.id.switch2);
+        final Switch s3 = (Switch) findViewById(R.id.switch3);
+        final Switch s4 = (Switch) findViewById(R.id.switch4);
+        final Switch s5 = (Switch) findViewById(R.id.switch5);
+        final Switch s6 = (Switch) findViewById(R.id.switch6);
+        final Switch s7 = (Switch) findViewById(R.id.switch7);
+        final Switch s8 = (Switch) findViewById(R.id.switch8);
 
         s0.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -154,6 +154,14 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay = addHeatMap(R.raw.dataset, gradient);
+                    s1.setChecked(false);
+                    s2.setChecked(false);
+                    s3.setChecked(false);
+                    s4.setChecked(false);
+                    s5.setChecked(false);
+                    s6.setChecked(false);
+                    s7.setChecked(false);
+                    s8.setChecked(false);
                 } else {
                     mOverlay.remove();
                 }
@@ -177,6 +185,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s1 = addHeatMap(R.raw.s1, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s1.remove();
                 }
@@ -200,6 +209,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s2 = addHeatMap(R.raw.s2, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s2.remove();
                 }
@@ -223,6 +233,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s3 = addHeatMap(R.raw.s3, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s3.remove();
                 }
@@ -246,6 +257,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s4 = addHeatMap(R.raw.s4, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s4.remove();
                 }
@@ -269,6 +281,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s5 = addHeatMap(R.raw.s5, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s5.remove();
                 }
@@ -292,6 +305,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s6 = addHeatMap(R.raw.s6, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s6.remove();
                 }
@@ -315,6 +329,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s7 = addHeatMap(R.raw.s7, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s7.remove();
                 }
@@ -338,6 +353,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 if (isChecked) {
                     mOverlay_s8 = addHeatMap(R.raw.s8, gradient);
+                    s0.setChecked(false);
                 } else {
                     mOverlay_s8.remove();
                 }
