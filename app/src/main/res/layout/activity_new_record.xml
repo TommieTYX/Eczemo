@@ -148,6 +148,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:background="@drawable/ic_info_black_24dp"
+            android:onClick="popDialog"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.577"

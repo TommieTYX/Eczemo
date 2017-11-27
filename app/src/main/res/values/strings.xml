@@ -37,5 +37,57 @@
     <string name="weather_thunder">&#xf01e;</string>
     <string name="weather_drizzle">&#xf01c;</string>
     <string name="title_activity_view_calen">Calendar</string>
+    <string name="dialogMessage"><b>1. Atopic Dermatitis</b>\n
+- Dry, scaly skin\n
+- Redness\n
+- Itching\n
+- Cracks behind the ears\n
+- A rash on the cheeks, arms and/or legs\n
+- Open, crusted or “weepy” sores (usually during flare-ups)\n
+\n
+<b>2. Contact Dermatitis</b>\n
+- Red\n
+- Hot\n
+- Itchy\n
+- May "weep"\n
+\n
+<b>3. Dyshidrotic Eczema</b>\n
+- Small fluid-filled blisters on the fingers, hands, and feet\n
+- Itching\n
+- Redness\n
+- Flaking\n
+- Scaly, cracked skin\n
+- Pain\n
+\n
+<b>4. Hand Eczema</b>\n
+- Redness\n
+- Itching\n
+- Pain\n
+- Dryness, to the point of peeling and flaking\n
+- Cracks\n
+- Blisters\n
+
+<b>5. Neurodermatitis/Lichen Simplex Chronicus</b>\n
+- Leathery, thickened skin\n
+- Dark patches on the skin\n
+- Pronounced skin lines in the patches\n
+\n
+<b>6. Nummular Eczema</b>\n
+- Coin-shaped lesions on arms, legs, torso and/or hands\n
+- Itching and burning\n
+- Lesions that are oozing liquid or have crusted over\n
+- Red, scaly and inflamed skin around the lesions\n
+\n
+<b>7. Seborrheic Dermatitis</b>\n
+- Redness\n
+- Greasy, swollen skin\n
+- White or yellowish crusty flakes\n
+- Skin feels itchy or burns\n
+\n
+<b>8. Stasis Dermatitis</b>\n
+- Swelling\n
+- Redness\n
+- Scaling\n
+- Itching or pain</string>
 
 </resources>

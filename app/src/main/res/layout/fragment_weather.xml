@@ -2,28 +2,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="team22.eczemo.weatherFragment">
+    tools:context="team22.eczemo.weatherFragment"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/iconView"
+        android:layout_width="192dp"
+        android:layout_height="122dp"
+        android:paddingTop="30dp"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tempView"
+        android:layout_width="192dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="122dp"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/iconTextView"
+        android:layout_width="192dp"
+        android:layout_height="122dp"
+        android:layout_marginLeft="192dp"
+        android:paddingTop="25dp"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/HumidView"
-        android:layout_width="191dp"
+        android:layout_width="95dp"
         android:layout_height="122dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="190dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="122dp"
+        android:paddingTop="10dp"
         android:text=""
         android:textAlignment="center"
         android:textSize="40sp"
         tools:layout_editor_absoluteX="193dp" />
 
     <TextView
-        android:id="@+id/iconView"
-        android:layout_width="191dp"
+        android:id="@+id/HumidTextView"
+        android:layout_width="95dp"
         android:layout_height="122dp"
-        android:layout_alignParentTop="true"
+        android:layout_marginLeft="287dp"
+        android:layout_marginTop="122dp"
+        android:paddingTop="22dp"
+        android:text=""
         android:textAlignment="center"
-        android:textSize="40sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="4dp" />
-
+        android:textSize="23sp"
+        tools:layout_editor_absoluteX="193dp" />
 </FrameLayout>

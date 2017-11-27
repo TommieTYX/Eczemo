@@ -1,6 +1,7 @@
 package team22.eczemo;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,11 +15,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.Date;
 
 public class weatherFragment extends Fragment {
-    TextView humid, icon;
+    TextView humid,humidText,icon,iconText,tempView;
     private Handler handler;
     Typeface weatherFont;
 
@@ -33,8 +35,12 @@ public class weatherFragment extends Fragment {
         Log.i("weatherFrag","started createView");
         View recView = inflater.inflate(R.layout.fragment_weather, container, false);
         humid = (TextView)recView.findViewById(R.id.HumidView);
+        humidText =(TextView)recView.findViewById(R.id.HumidTextView);
+        humidText.setText("Humidity");
         icon = (TextView)recView.findViewById(R.id.iconView);
+        iconText = (TextView)recView.findViewById(R.id.iconTextView);
         icon.setTypeface(weatherFont);
+        tempView = (TextView) recView.findViewById(R.id.tempView);
         return recView;
     }
 
@@ -74,9 +80,9 @@ public class weatherFragment extends Fragment {
         try {
             JSONObject details = json.getJSONArray("weather").getJSONObject(0);
             JSONObject main = json.getJSONObject("main");
-            humid.setText(main.getString("humidity") + "%\n"+"Humidity");
+            humid.setText(main.getString("humidity") + "%");
 
-            //currentTemperatureField.setText(String.format("%.2f", (main.getDouble("temp")) - 273.15)+ " ℃");
+            tempView.setText(String.format("%.1f", (main.getDouble("temp")) - 273.15)+ " ℃");
 
 
             setWeatherIcon(details.getInt("id"),
@@ -98,6 +104,8 @@ public class weatherFragment extends Fragment {
             if(currentTime>=sunrise && currentTime<sunset) {
                 iconDetail = getActivity().getString(R.string.weather_sunny);
                 weather = "Sunny Day";
+                icon.setTextColor(Color.parseColor("#FFA500"));
+                iconText.setTextColor(Color.parseColor("#FFA500"));
             } else {
                 iconDetail =getActivity().getString(R.string.weather_clear_night);
                 weather = "Clear Night";
@@ -107,29 +115,42 @@ public class weatherFragment extends Fragment {
                 case 2 :
                     iconDetail = getActivity().getString(R.string.weather_thunder);
                     weather = "thunder Storm";
+                    icon.setTextColor(Color.BLACK);
+                    iconText.setTextColor(Color.BLACK);
                     break;
                 case 3 :
                     iconDetail = getActivity().getString(R.string.weather_drizzle);
                     weather = "Drizzling Rain";
+                    icon.setTextColor(Color.parseColor("#d1d6ea"));
+                    iconText.setTextColor(Color.parseColor("#d1d6ea"));
                     break;
                 case 7 :
                     iconDetail = getActivity().getString(R.string.weather_foggy);
                     weather = "Foggy Day";
+                    icon.setTextColor(Color.parseColor("#93b0b2"));
+                    iconText.setTextColor(Color.parseColor("#93b0b2"));
                     break;
                 case 8 :
                     iconDetail = getActivity().getString(R.string.weather_cloudy);
                     weather = "Cloudy Day";
+                    icon.setTextColor(Color.parseColor("#87ceeb"));
+                    iconText.setTextColor(Color.parseColor("#87ceeb"));
                     break;
                 case 6 :
                     iconDetail = getActivity().getString(R.string.weather_snowy);
                     weather = "Snowy Day";
+                    icon.setTextColor(Color.parseColor("#fffafa"));
+                    iconText.setTextColor(Color.parseColor("#fffafa"));
                     break;
                 case 5 :
                     iconDetail = getActivity().getString(R.string.weather_rainy);
                     weather = "Shower Rain";
+                    icon.setTextColor(Color.parseColor("#4a6583"));
+                    iconText.setTextColor(Color.parseColor("#4a6583"));
                     break;
             }
         }
-        icon.setText(iconDetail+"\n"+weather);
+        icon.setText(iconDetail);
+        iconText.setText(weather);
     }
 }
