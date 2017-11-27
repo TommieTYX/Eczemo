@@ -44,8 +44,9 @@ public class MainActivity extends AppCompatActivity
 
             }
         });*/
+
         FloatingActionButton newRec = (FloatingActionButton) findViewById(R.id.newRec);
-            newRec.setOnClickListener(new View.OnClickListener() {
+        newRec.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                 /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -150,7 +151,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_heatmap) {
             startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
-
+            startActivity(new Intent(MainActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_statistics) {
 
         } else if (id == R.id.nav_addRec) {
