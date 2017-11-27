@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_heatmap) {
             startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_statistics) {
 
         } else if (id == R.id.nav_addRec) {
-
+            startActivity(new Intent(MainActivity.this, newRecord.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

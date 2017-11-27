@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimary">@android:color/holo_green_dark</color>
+    <color name="colorPrimaryDark">@android:color/holo_green_dark</color>
     <color name="colorAccent">#040404</color>
     <color name="screen_background">#333333</color>
-    <color name="display_background">#000</color>
+    <color name="display_background"></color>
     <color name="spinner">#FFFFFF</color>
     <color name="main_background">#CAECCF</color>
     <color name="nav_bar">#6ab344</color>

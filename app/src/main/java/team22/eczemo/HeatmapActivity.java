@@ -1,5 +1,6 @@
 package team22.eczemo;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -155,7 +156,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            startActivity(new Intent(HeatmapActivity.this, MainActivity.class));
         } else if (id == R.id.nav_heatmap) {
             //startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
@@ -163,7 +164,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         } else if (id == R.id.nav_statistics) {
 
         } else if (id == R.id.nav_addRec) {
-
+            startActivity(new Intent(HeatmapActivity.this, newRecord.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -326,7 +327,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         mProvider = new HeatmapTileProvider.Builder()
                 .data(list)
                 .gradient(gradient)
-                .opacity(0.5)
+                .opacity(0.7)
                 .build();
         // Add a tile overlay to the map, using the heat map tile provider.
         mOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
