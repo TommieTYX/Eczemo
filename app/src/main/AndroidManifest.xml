@@ -61,6 +61,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCjKSRvlq297ZV8zY4wSLQTIdMGl1ukVZs" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name=".viewCalenActivity"

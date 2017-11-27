@@ -18,6 +18,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -70,6 +72,14 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
     private HeatmapTileProvider mProvider;
     private TileOverlay mOverlay;
+    private TileOverlay mOverlay_s1;
+    private TileOverlay mOverlay_s2;
+    private TileOverlay mOverlay_s3;
+    private TileOverlay mOverlay_s4;
+    private TileOverlay mOverlay_s5;
+    private TileOverlay mOverlay_s6;
+    private TileOverlay mOverlay_s7;
+    private TileOverlay mOverlay_s8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,6 +124,225 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
         // Construct a FusedLocationProviderClient.
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+
+
+        Switch s0 = (Switch) findViewById(R.id.switch0);
+        Switch s1 = (Switch) findViewById(R.id.switch1);
+        Switch s2= (Switch) findViewById(R.id.switch2);
+        Switch s3 = (Switch) findViewById(R.id.switch3);
+        Switch s4 = (Switch) findViewById(R.id.switch4);
+        Switch s5 = (Switch) findViewById(R.id.switch5);
+        Switch s6 = (Switch) findViewById(R.id.switch6);
+        Switch s7 = (Switch) findViewById(R.id.switch7);
+        Switch s8 = (Switch) findViewById(R.id.switch8);
+
+        s0.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(250, 220, 0), // yellow
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.1f, 0.5f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay = addHeatMap(R.raw.dataset, gradient);
+                } else {
+                    mOverlay.remove();
+                }
+            }
+        });
+
+        s1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(96, 187, 255),
+                        Color.rgb(0, 115, 255)
+                };
+
+                float[] startPoints = {
+                        0.3f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s1 = addHeatMap(R.raw.s1, gradient);
+                } else {
+                    mOverlay_s1.remove();
+                }
+            }
+        });
+
+        s2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.2f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s2 = addHeatMap(R.raw.s2, gradient);
+                } else {
+                    mOverlay_s2.remove();
+                }
+            }
+        });
+
+        s3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.2f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s3 = addHeatMap(R.raw.s3, gradient);
+                } else {
+                    mOverlay_s3.remove();
+                }
+            }
+        });
+
+        s4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.2f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s4 = addHeatMap(R.raw.s4, gradient);
+                } else {
+                    mOverlay_s4.remove();
+                }
+            }
+        });
+
+        s5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.2f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s5 = addHeatMap(R.raw.s5, gradient);
+                } else {
+                    mOverlay_s5.remove();
+                }
+            }
+        });
+
+        s6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.2f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s6 = addHeatMap(R.raw.s6, gradient);
+                } else {
+                    mOverlay_s6.remove();
+                }
+            }
+        });
+
+        s7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.2f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s7 = addHeatMap(R.raw.s7, gradient);
+                } else {
+                    mOverlay_s7.remove();
+                }
+            }
+        });
+
+        s8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // Create the gradient.
+                int[] colors = {
+                        Color.rgb(102, 225, 0), // green
+                        Color.rgb(255, 0, 0)    // red
+                };
+
+                float[] startPoints = {
+                        0.2f, 1f
+                };
+
+                Gradient gradient = new Gradient(colors, startPoints);
+
+                if (isChecked) {
+                    mOverlay_s8 = addHeatMap(R.raw.s8, gradient);
+                } else {
+                    mOverlay_s8.remove();
+                }
+            }
+        });
     }
 
     @Override
@@ -210,7 +439,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         // Get the current location of the device and set the position of the map.
         getDeviceLocation();
 
-        addHeatMap();
+        Switch defaultSwitch = (Switch) findViewById(R.id.switch0);
+        defaultSwitch.setChecked(true);
     }
 
     private void updateLocationUI() {
@@ -301,24 +531,12 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         }
     }
 
-    private void addHeatMap() {
+    private TileOverlay addHeatMap(int dataset, Gradient gradient) {
         List<LatLng> list = null;
-
-        // Create the gradient.
-        int[] colors = {
-                Color.rgb(102, 225, 0), // green
-                Color.rgb(255, 0, 0)    // red
-        };
-
-        float[] startPoints = {
-                0.2f, 1f
-        };
-
-        Gradient gradient = new Gradient(colors, startPoints);
 
         // Get the data: latitude/longitude positions of police stations.
         try {
-            list = readItems(R.raw.dataset);
+            list = readItems(dataset);
         } catch (JSONException e) {
             Toast.makeText(this, "Problem reading list of locations.", Toast.LENGTH_LONG).show();
         }
@@ -330,7 +548,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 .opacity(0.7)
                 .build();
         // Add a tile overlay to the map, using the heat map tile provider.
-        mOverlay = mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
+        return mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
     }
 
     private ArrayList<LatLng> readItems(int resource) throws JSONException {
