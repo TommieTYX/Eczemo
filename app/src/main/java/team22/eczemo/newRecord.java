@@ -1,6 +1,7 @@
 package team22.eczemo;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -93,6 +94,6 @@ public class newRecord extends AppCompatActivity {
 
     public void onAdd(View curView){
         Toast.makeText(this, "New record has been added!", Toast.LENGTH_SHORT).show();
-
+        startActivity(new Intent(newRecord.this, MainActivity.class));
     }
 }

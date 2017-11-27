@@ -162,6 +162,7 @@
         android:layout_width="0dp"
         android:layout_height="58dp"
         android:backgroundTint="@android:color/background_light"
+        android:onClick="onAdd"
         android:text="Add"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
