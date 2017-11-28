@@ -43,10 +43,11 @@
                 android:id="@+id/switch0"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/heatmap"
+                android:fontFamily="@font/roboto"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:fontFamily="@font/roboto"
-                android:text="Overall results"
+                android:text="  Overall results"
                 android:theme="@style/SwitchTheme" />
 
             <Switch
@@ -54,10 +55,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:checked="false"
+                android:drawableLeft="@drawable/redbox"
                 android:fontFamily="@font/roboto"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="Atopic dermatitis"
+                android:text="  Atopic dermatitis"
                 android:theme="@style/SwitchTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -68,11 +70,12 @@
                 android:id="@+id/switch2"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/greenbox"
                 android:fontFamily="@font/roboto"
-                android:text="Contact dermatitis"
-                android:theme="@style/SwitchTheme"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
+                android:text="  Contact dermatitis"
+                android:theme="@style/SwitchTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.045"
@@ -84,11 +87,12 @@
                 android:id="@+id/switch3"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/yellowbox"
                 android:fontFamily="@font/roboto"
-                android:text="Dyshidrotic eczema"
-                android:theme="@style/SwitchTheme"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
+                android:text="  Dyshidrotic eczema"
+                android:theme="@style/SwitchTheme"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="534dp" />
 
@@ -96,12 +100,13 @@
                 android:id="@+id/switch4"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/bluebox"
                 android:fontFamily="@font/roboto"
-                android:text="Hand eczema"
-                android:textAlignment="viewStart"
-                android:theme="@style/SwitchTheme"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
+                android:text="  Hand eczema"
+                android:textAlignment="viewStart"
+                android:theme="@style/SwitchTheme"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="572dp" />
 
@@ -109,41 +114,45 @@
                 android:id="@+id/switch5"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/orangebox"
                 android:fontFamily="@font/roboto"
-                android:text="Neurodermatitis/Lichen simplex chronicus"
-                android:theme="@style/SwitchTheme"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:text="  Neurodermatitis/Lichen simplex chronicus"
+                android:theme="@style/SwitchTheme" />
 
             <Switch
                 android:id="@+id/switch6"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/purplebox"
                 android:fontFamily="@font/roboto"
-                android:text="Nummular eczema"
-                android:theme="@style/SwitchTheme"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:text="  Nummular eczema"
+                android:theme="@style/SwitchTheme" />
 
             <Switch
                 android:id="@+id/switch7"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/cyanbox"
                 android:fontFamily="@font/roboto"
-                android:text="Seborrheic dermatitis"
-                android:theme="@style/SwitchTheme"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:text="  Seborrheic dermatitis"
+                android:theme="@style/SwitchTheme" />
 
             <Switch
                 android:id="@+id/switch8"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:drawableLeft="@drawable/magentabox"
                 android:fontFamily="@font/roboto"
-                android:text="Stasis dermatitis"
-                android:theme="@style/SwitchTheme"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:text="  Stasis dermatitis"
+                android:theme="@style/SwitchTheme" />
 
         </LinearLayout>
     </ScrollView>
