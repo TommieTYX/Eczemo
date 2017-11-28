@@ -89,5 +89,6 @@
 - Redness\n
 - Scaling\n
 - Itching or pain</string>
+    <string name="title_activity_stat">statActivity</string>
 
 </resources>

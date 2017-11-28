@@ -68,6 +68,10 @@
         <activity
             android:name=".viewCalenActivity"
             android:label="@string/title_activity_view_calen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".statActivity"
+            android:label="@string/title_activity_stat"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

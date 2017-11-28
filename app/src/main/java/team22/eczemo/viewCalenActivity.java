@@ -286,7 +286,7 @@ public class viewCalenActivity extends AppCompatActivity
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(viewCalenActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_statistics) {
-
+            startActivity(new Intent(viewCalenActivity.this, statActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(viewCalenActivity.this, newRecord.class));
         }

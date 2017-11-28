@@ -86,8 +86,10 @@ public class D3ActivityFragment extends Fragment {
             // note the mapping from  file:///android_asset
             // to Android-D3jsPieChart/assets or
             // Android-D3jsPieChart/app/src/main/assets
+           /* webview.loadUrl("file:///android_asset/" +
+                    "html/piechart.html");*/
             webview.loadUrl("file:///android_asset/" +
-                    "html/piechart.html");
+                    "html/test.html");
         }
     }
 
@@ -99,7 +101,8 @@ public class D3ActivityFragment extends Fragment {
         String text = Arrays.toString(dataset);
 
         // pass the array to the JavaScript function
-        webview.loadUrl("javascript:loadPieChart(" +
-                text + ")");
+       /* webview.loadUrl("javascript:loadPieChart(" +
+                text + ")");*/
+
     }
 }

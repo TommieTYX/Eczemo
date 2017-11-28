@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(MainActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_statistics) {
-
+            startActivity(new Intent(MainActivity.this, statActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(MainActivity.this, newRecord.class));
         }
