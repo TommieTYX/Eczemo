@@ -59,30 +59,12 @@ public class MainActivity extends AppCompatActivity
 
         TextView treatmentDesc = (TextView) findViewById(R.id.textview_main);
         treatmentDesc.setMovementMethod(new ScrollingMovementMethod());
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("1231231231231223123123\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("1231231231231223123123\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("1231231231231223123123\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("ASDASDASD\r\n");
-        treatmentDesc.append("1231231231231223123123\r\n");
+        treatmentDesc.append(
+                "\u2022 If you need to clean your hands, wash them with lukewarm (not hot) water and fragrance-free cleanser.\n\n" +
+                "\u2022 Gently blot hands dry, and apply a moisturizer immediately after you wash your hands.\n\n" +
+                "\u2022 The most effective moisturizers are the ones with a higher oil content (like ointments and creams). Keep one near every sink in your home, so you don’t forget to apply it after washing your hands\n" +
+                "\u2022 Avoid waterless, antibacterial cleansers, which often contain ingredients like alcohol and solvents that are very hard on your hands (especially during flare-ups).\n\n"
+        );
 
 
 
@@ -118,12 +100,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -152,8 +129,6 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(MainActivity.this, viewCalenActivity.class));
-        } else if (id == R.id.nav_statistics) {
-            startActivity(new Intent(MainActivity.this, statActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(MainActivity.this, newRecord.class));
         }

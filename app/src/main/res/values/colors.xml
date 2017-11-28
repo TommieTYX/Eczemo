@@ -8,4 +8,5 @@
     <color name="spinner">#FFFFFF</color>
     <color name="main_background">#CAECCF</color>
     <color name="nav_bar">#6ab344</color>
+    <color name="colorPrimaryDark2">#346a00</color>
 </resources>

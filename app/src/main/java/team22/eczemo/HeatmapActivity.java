@@ -371,12 +371,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.heatmap, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -406,8 +401,6 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             //startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(HeatmapActivity.this, viewCalenActivity.class));
-        } else if (id == R.id.nav_statistics) {
-            startActivity(new Intent(HeatmapActivity.this, statActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(HeatmapActivity.this, newRecord.class));
         }

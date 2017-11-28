@@ -44,12 +44,7 @@ public class statActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.stat, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -78,8 +73,6 @@ public class statActivity extends AppCompatActivity
             startActivity(new Intent(statActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(statActivity.this, viewCalenActivity.class));
-        } else if (id == R.id.nav_statistics) {
-            startActivity(new Intent(statActivity.this, statActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(statActivity.this, newRecord.class));
         }

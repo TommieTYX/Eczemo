@@ -251,12 +251,7 @@ public class viewCalenActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.view_calen, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -285,8 +280,6 @@ public class viewCalenActivity extends AppCompatActivity
             startActivity(new Intent(viewCalenActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(viewCalenActivity.this, viewCalenActivity.class));
-        } else if (id == R.id.nav_statistics) {
-            startActivity(new Intent(viewCalenActivity.this, statActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(viewCalenActivity.this, newRecord.class));
         }
