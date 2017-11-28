@@ -2,17 +2,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="team22.eczemo.weatherFragment"
     android:weightSum="100">
 
-    <TextView
-        android:id="@+id/iconView"
-        android:layout_width="192dp"
-        android:layout_height="122dp"
-        android:paddingTop="30dp"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        tools:layout_editor_absoluteX="0dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.80">
+
+        <TextView
+            android:id="@+id/iconView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="100dp"
+            android:paddingTop="30dp"
+            android:textAlignment="center"
+            android:textSize="50sp"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/iconTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:paddingRight="50dp"
+            android:paddingTop="25dp"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            tools:layout_editor_absoluteX="0dp" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tempView"
@@ -20,16 +44,6 @@
         android:layout_height="122dp"
         android:layout_marginTop="122dp"
         android:paddingTop="10dp"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/iconTextView"
-        android:layout_width="192dp"
-        android:layout_height="122dp"
-        android:layout_marginLeft="192dp"
-        android:paddingTop="25dp"
         android:textAlignment="center"
         android:textSize="40sp"
         tools:layout_editor_absoluteX="0dp" />

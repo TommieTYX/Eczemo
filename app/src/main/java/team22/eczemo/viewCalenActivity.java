@@ -288,7 +288,7 @@ public class viewCalenActivity extends AppCompatActivity
         } else if (id == R.id.nav_statistics) {
 
         } else if (id == R.id.nav_addRec) {
-            startActivity(new Intent(viewCalenActivity.this, viewCalenActivity.class));
+            startActivity(new Intent(viewCalenActivity.this, newRecord.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

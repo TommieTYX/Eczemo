@@ -405,7 +405,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         } else if (id == R.id.nav_heatmap) {
             //startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
-
+            startActivity(new Intent(HeatmapActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_statistics) {
 
         } else if (id == R.id.nav_addRec) {
