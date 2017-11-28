@@ -153,7 +153,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay = addHeatMap(R.raw.dataset, gradient);
+                    mOverlay = addHeatMap(R.raw.dataset, gradient, 0.7);
                     s1.setChecked(false);
                     s2.setChecked(false);
                     s3.setChecked(false);
@@ -173,18 +173,18 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(96, 187, 255),
-                        Color.rgb(0, 115, 255)
+                        Color.rgb(147, 16,49),
+                        Color.rgb(230, 25, 75)
                 };
 
                 float[] startPoints = {
-                        0.3f, 1f
+                        0.2f, 1f
                 };
 
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s1 = addHeatMap(R.raw.s1, gradient);
+                    mOverlay_s1 = addHeatMap(R.raw.s1, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s1.remove();
@@ -197,8 +197,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(102, 225, 0), // green
-                        Color.rgb(255, 0, 0)    // red
+                        Color.rgb(36, 107, 45),
+                        Color.rgb(60, 180, 75)
                 };
 
                 float[] startPoints = {
@@ -208,7 +208,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s2 = addHeatMap(R.raw.s2, gradient);
+                    mOverlay_s2 = addHeatMap(R.raw.s2, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s2.remove();
@@ -221,8 +221,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(102, 225, 0), // green
-                        Color.rgb(255, 0, 0)    // red
+                        Color.rgb(180, 159, 0),
+                        Color.rgb(255, 255, 25)
                 };
 
                 float[] startPoints = {
@@ -232,7 +232,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s3 = addHeatMap(R.raw.s3, gradient);
+                    mOverlay_s3 = addHeatMap(R.raw.s3, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s3.remove();
@@ -245,8 +245,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(102, 225, 0), // green
-                        Color.rgb(255, 0, 0)    // red
+                        Color.rgb(0, 66, 102),
+                        Color.rgb(0, 130, 200)
                 };
 
                 float[] startPoints = {
@@ -256,7 +256,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s4 = addHeatMap(R.raw.s4, gradient);
+                    mOverlay_s4 = addHeatMap(R.raw.s4, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s4.remove();
@@ -269,8 +269,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(102, 225, 0), // green
-                        Color.rgb(255, 0, 0)    // red
+                        Color.rgb(195, 87, 9), // green
+                        Color.rgb(245, 130, 49)    // red
                 };
 
                 float[] startPoints = {
@@ -280,7 +280,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s5 = addHeatMap(R.raw.s5, gradient);
+                    mOverlay_s5 = addHeatMap(R.raw.s5, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s5.remove();
@@ -293,8 +293,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(102, 225, 0), // green
-                        Color.rgb(255, 0, 0)    // red
+                        Color.rgb(70, 15, 87),
+                        Color.rgb(145, 30, 180)
                 };
 
                 float[] startPoints = {
@@ -304,7 +304,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s6 = addHeatMap(R.raw.s6, gradient);
+                    mOverlay_s6 = addHeatMap(R.raw.s6, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s6.remove();
@@ -317,8 +317,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(102, 225, 0), // green
-                        Color.rgb(255, 0, 0)    // red
+                        Color.rgb(15, 189, 189), // green
+                        Color.rgb(70, 240, 240)    // red
                 };
 
                 float[] startPoints = {
@@ -328,7 +328,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s7 = addHeatMap(R.raw.s7, gradient);
+                    mOverlay_s7 = addHeatMap(R.raw.s7, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s7.remove();
@@ -341,8 +341,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // Create the gradient.
                 int[] colors = {
-                        Color.rgb(102, 225, 0), // green
-                        Color.rgb(255, 0, 0)    // red
+                        Color.rgb(171, 13, 163), // green
+                        Color.rgb(240, 50, 230)    // red
                 };
 
                 float[] startPoints = {
@@ -352,7 +352,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
                 Gradient gradient = new Gradient(colors, startPoints);
 
                 if (isChecked) {
-                    mOverlay_s8 = addHeatMap(R.raw.s8, gradient);
+                    mOverlay_s8 = addHeatMap(R.raw.s8, gradient, 0.6);
                     s0.setChecked(false);
                 } else {
                     mOverlay_s8.remove();
@@ -540,9 +540,8 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         }
     }
 
-    private TileOverlay addHeatMap(int dataset, Gradient gradient) {
+    private TileOverlay addHeatMap(int dataset, Gradient gradient, double opacity) {
         List<LatLng> list = null;
-
         // Get the data: latitude/longitude positions of police stations.
         try {
             list = readItems(dataset);
@@ -554,7 +553,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         mProvider = new HeatmapTileProvider.Builder()
                 .data(list)
                 .gradient(gradient)
-                .opacity(0.7)
+                .opacity(opacity)
                 .build();
         // Add a tile overlay to the map, using the heat map tile provider.
         return mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
