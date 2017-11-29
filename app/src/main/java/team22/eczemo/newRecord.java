@@ -1,3 +1,5 @@
+//Author: Loong Jian Wen
+
 package team22.eczemo;
 
 import android.content.DialogInterface;
@@ -44,6 +46,8 @@ public class newRecord extends AppCompatActivity {
         dropdown.setAdapter(adapter);
     }
 
+    // toggling between severity level, changing the alpha values.
+    // so users knows which are the oen is selected for better visuallization
     public void onPressed(View curView) {
         try {
             rate1.getBackground().setAlpha(90);
@@ -76,6 +80,7 @@ public class newRecord extends AppCompatActivity {
         }
     }
 
+    // Information dialog to show the types of eczema
     public void popDialog(View curView){
         AlertDialog.Builder builder = new AlertDialog.Builder(curView.getContext());
         builder.setCancelable(true);
@@ -92,6 +97,7 @@ public class newRecord extends AppCompatActivity {
         dialog.show();
     }
 
+    //Toast message
     public void onAdd(View curView){
         Toast.makeText(this, "New record has been added!", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(newRecord.this, MainActivity.class));

@@ -1,3 +1,5 @@
+//Author: Loong Jian Wen
+
 package team22.eczemo;
 
 import android.content.Intent;
@@ -80,6 +82,8 @@ public class viewCalenActivity extends AppCompatActivity
         caldroidFragment.setMinDate(curDate);
         SimpleDateFormat simpledateformat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zz yyyy");
 
+
+        //Apply icons onto calendar with data from json
         try {
             InputStream inputStream = getResources().openRawResource(R.raw.dates_data);
             String json = new Scanner(inputStream).useDelimiter("\\A").next();
@@ -188,6 +192,7 @@ public class viewCalenActivity extends AppCompatActivity
         caldroidFragment.setCaldroidListener(listener);
     }
 
+    //Apply suitable weather icon and text color to match the weather
     private void setWeatherIcon(int actualId){
         Log.i("weatherFrag","started setting icon");
         String iconDetail = "";
@@ -282,6 +287,8 @@ public class viewCalenActivity extends AppCompatActivity
             startActivity(new Intent(viewCalenActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(viewCalenActivity.this, newRecord.class));
+        } else if (id == R.id.nav_stats) {
+            startActivity(new Intent(viewCalenActivity.this, statActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

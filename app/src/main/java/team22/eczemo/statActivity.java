@@ -1,3 +1,9 @@
+/*
+Author: Loong Jian Wen
+        Teh Yu Xiang
+        Chua Xuan Long
+ */
+
 package team22.eczemo;
 
 import android.content.Intent;
@@ -75,6 +81,8 @@ public class statActivity extends AppCompatActivity
             startActivity(new Intent(statActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(statActivity.this, newRecord.class));
+        } else if (id == R.id.nav_stats) {
+            startActivity(new Intent(statActivity.this, statActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

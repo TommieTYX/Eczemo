@@ -1,3 +1,9 @@
+/*
+Author: Loong Jian Wen
+        Teh Yu Xiang
+        Chua Xuan Long
+ */
+
 package team22.eczemo;
 
 import android.os.Bundle;

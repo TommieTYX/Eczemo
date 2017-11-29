@@ -1,3 +1,5 @@
+//Author: Loong Jian Wen
+
 package team22.eczemo;
 
 import android.content.Context;
@@ -52,7 +54,7 @@ public class weatherFragment extends Fragment {
         weatherFont = Typeface.createFromAsset(getActivity().getAssets(), "fonts/weather.ttf");
         retrieveWeather("Singapore, SG");
     }
-
+    //Get weather Information of a lcation from OpenWeather API
     private void retrieveWeather(final String city){
         Log.i("weatherFrag","started retrieving");
         new Thread(){
@@ -75,6 +77,7 @@ public class weatherFragment extends Fragment {
         }.start();
     }
 
+    //Display weather information to the user
     private void displayWeather(JSONObject json){
         Log.i("weatherFrag","started displaying");
         try {
@@ -94,6 +97,7 @@ public class weatherFragment extends Fragment {
         }
     }
 
+    //Apply suitable weather icon and text color to match the weather
     private void setWeatherIcon(int actualId, long sunrise, long sunset){
         Log.i("weatherFrag","started setting icon");
         int id = actualId / 100;

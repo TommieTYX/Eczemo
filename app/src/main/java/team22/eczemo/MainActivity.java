@@ -1,3 +1,5 @@
+//Author: Chua Xuan Long
+
 package team22.eczemo;
 
 import android.content.Intent;
@@ -32,19 +34,7 @@ public class MainActivity extends AppCompatActivity
         ImageView preImg = (ImageView) findViewById(R.id.predictionImg);
         preImg.setImageBitmap(BitmapFactory.decodeResource(getResources(),R.drawable.rate2));
 
-
-        /*FloatingActionButton d3 = (FloatingActionButton) findViewById(R.id.d3);
-        d3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                *//*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*//*
-                Intent i2 = new Intent(MainActivity.this, D3Activity.class);
-                startActivity(i2);
-
-            }
-        });*/
-
+        //button for adding new record
         FloatingActionButton newRec = (FloatingActionButton) findViewById(R.id.newRec);
         newRec.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -57,6 +47,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        //Recommendation text box
         TextView treatmentDesc = (TextView) findViewById(R.id.textview_main);
         treatmentDesc.setMovementMethod(new ScrollingMovementMethod());
         treatmentDesc.append(
@@ -65,20 +56,6 @@ public class MainActivity extends AppCompatActivity
                 "\u2022 The most effective moisturizers are the ones with a higher oil content (like ointments and creams). Keep one near every sink in your home, so you don’t forget to apply it after washing your hands\n" +
                 "\u2022 Avoid waterless, antibacterial cleansers, which often contain ingredients like alcohol and solvents that are very hard on your hands (especially during flare-ups).\n\n"
         );
-
-
-
-      /*  FloatingActionButton stepdetect = (FloatingActionButton) findViewById(R.id.stepdetect);
-        stepdetect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                *//*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*//*
-                Intent i3 = new Intent(MainActivity.this, Pedometer.class);
-                startActivity(i3);
-
-            }
-        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -123,14 +100,14 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-
-        } else if (id == R.id.nav_heatmap) {
+        if (id == R.id.nav_heatmap) {
             startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(MainActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(MainActivity.this, newRecord.class));
+        }else if (id == R.id.nav_stats) {
+            startActivity(new Intent(MainActivity.this, statActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

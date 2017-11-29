@@ -1,3 +1,5 @@
+//Author: Teh Yu Xiang
+
 package team22.eczemo;
 
 import android.content.Intent;
@@ -94,15 +96,6 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -136,6 +129,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         final Switch s7 = (Switch) findViewById(R.id.switch7);
         final Switch s8 = (Switch) findViewById(R.id.switch8);
 
+        //toggling the heatmaps layers
         s0.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -152,6 +146,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
                 Gradient gradient = new Gradient(colors, startPoints);
 
+                //if the switch is on, off all button except this and enable overlay
                 if (isChecked) {
                     mOverlay = addHeatMap(R.raw.dataset, gradient, 0.7);
                     s1.setChecked(false);
@@ -384,7 +379,6 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -397,12 +391,12 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
         if (id == R.id.nav_home) {
             startActivity(new Intent(HeatmapActivity.this, MainActivity.class));
-        } else if (id == R.id.nav_heatmap) {
-            //startActivity(new Intent(MainActivity.this, HeatmapActivity.class));
         } else if (id == R.id.nav_calendar) {
             startActivity(new Intent(HeatmapActivity.this, viewCalenActivity.class));
         } else if (id == R.id.nav_addRec) {
             startActivity(new Intent(HeatmapActivity.this, newRecord.class));
+        } else if (id == R.id.nav_stats) {
+            startActivity(new Intent(HeatmapActivity.this, statActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -412,35 +406,14 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        // Add a marker in Sydney, Australia,
-        // and move the map's camera to the same location.
-        /*LatLng sydney = new LatLng(-33.852, 151.211);
-        googleMap.addMarker(new MarkerOptions().position(sydney)
-                .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));*/
         mMap = googleMap;
 
         mMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener(){
             @Override
             public boolean onMyLocationButtonClick() {
-
-
                 return false;
             }
         });
-
-        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng latLng) {
-
-                //{"lat" : 1.3576457690427843, "lng" : 103.75096892472357 } ,
-                //System.out.println("{\"lat\" : " + latLng.latitude + ", \"lng\" : " + latLng.longitude + " } ,");
-            }
-        });
-
-
-
-        // Do other setup activities here too, as described elsewhere in this tutorial.
 
         // Turn on the My Location layer and the related control on the map.
         updateLocationUI();
@@ -448,6 +421,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         // Get the current location of the device and set the position of the map.
         getDeviceLocation();
 
+        //toggle on overall overlay by default
         Switch defaultSwitch = (Switch) findViewById(R.id.switch0);
         defaultSwitch.setChecked(true);
     }
@@ -540,9 +514,11 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         }
     }
 
+    //method to lay the heatmap on the map
     private TileOverlay addHeatMap(int dataset, Gradient gradient, double opacity) {
         List<LatLng> list = null;
-        // Get the data: latitude/longitude positions of police stations.
+
+        // Get the data: latitude/longitude positions from the json file in res/raw/dataset.json.
         try {
             list = readItems(dataset);
         } catch (JSONException e) {
@@ -559,6 +535,7 @@ public class HeatmapActivity extends AppCompatActivity implements NavigationView
         return mMap.addTileOverlay(new TileOverlayOptions().tileProvider(mProvider));
     }
 
+    //function to read json into Arraylist of latlng
     private ArrayList<LatLng> readItems(int resource) throws JSONException {
         ArrayList<LatLng> list = new ArrayList<LatLng>();
         InputStream inputStream = getResources().openRawResource(resource);
