@@ -95,7 +95,7 @@ public class D3ActivityFragment extends Fragment {
            /* webview.loadUrl("file:///android_asset/" +
                     "html/piechart.html");*/
             webview.loadUrl("file:///android_asset/" +
-                    "html/test.html");
+                    "html/statistics.html");
         }
     }
 

@@ -1,3 +1,9 @@
+<!--
+Author: Loong Jian Wen
+Teh Yu Xiang
+Chua Xuan Long
+-->
+
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
@@ -59,7 +65,7 @@ rect:hover {  fill:blue; }
 <script>
 function dashboard(id, fData){
     var barColor = 'steelblue';
-    function segColor(c){ return {Temperature:"#807dba", Humidity:"#e08214",Flare:"#41ab5d"}[c]; }
+    function segColor(c){ return {Temperature:"#fbc02d", Humidity:"#29b6f6",Flare:"#ef5350"}[c]; }
 
     // compute total for each state.
     fData.forEach(function(d){d.total=d.freq.Temperature+d.freq.Humidity+d.freq.Flare;});
@@ -181,6 +187,7 @@ function dashboard(id, fData){
         function mouseover(d){
             // call the update function of histogram with new data.
             hG.update(fData.map(function(v){
+			console.log(d.data.type);
                 return [v.State,v.freq[d.data.type]];}),segColor(d.data.type));
         }
         //Utility function to be called on mouseout a pie slice.
@@ -207,7 +214,15 @@ function dashboard(id, fData){
         var legend = d3.select("#subboard").append("table").attr('class','legend');
 
         // create one row per segment.
-        var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
+        var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr")
+										.on("mouseover", function(d, i) {
+											hG.update(fData.map(function(v){
+												return [v.State,v.freq[d.type]];}),segColor(d.type));
+										})
+										.on("mouseout", function(d, i) {
+											hG.update(fData.map(function(v){
+												return [v.State,v.total];}), barColor);
+										});
 
         // create the first column for each segment.
         tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
@@ -240,7 +255,6 @@ function dashboard(id, fData){
         function getLegend(d,aD){ // Utility function to compute percentage.
             return d3.format("%")(d.freq/d3.sum(aD.map(function(v){ return v.freq; })));
         }
-
         return leg;
     }
 
