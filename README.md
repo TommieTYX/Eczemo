@@ -1,4 +1,4 @@
-# Eczemo 
+# Eczemo - Eczema Monitoring System
 <img src="https://github.com/TommieTYX/Eczemo/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="100">
 HCI Coursework - Team 22 
 
