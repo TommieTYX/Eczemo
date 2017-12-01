@@ -4,7 +4,11 @@ HCI Coursework - Team 22
 
 Get our latest APK here: [**Latest Release**](https://github.com/TommieTYX/Eczemo/releases/latest)
 
+To learn more on how to use the app, head to our [**wiki**](https://github.com/TommieTYX/Eczemo/wiki) for quick start guide!
+
 # Installation
+**GPS** is **required** to be enabled for Heat map to work
+
 Clone the project using android studio and gradle will download all the dependency for you!
 
 
